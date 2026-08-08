@@ -1,0 +1,16 @@
+.topbar-actions{display:flex;gap:8px;align-items:center}.theme-toggle{font-size:1.2rem}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#17131b;--surface:#221b28;--ink:#f2ebf5;--muted:#b9aebe;--accent:#b995d6;--accent-soft:#382a45;--border:#4c3d57;--danger:#f08aa0;--shadow:0 12px 34px rgba(0,0,0,.34)}
+:root[data-theme="dark"] body{background:linear-gradient(#17131b,#120f15 28%)}
+:root[data-theme="dark"] .search-panel{background:rgba(23,19,27,.94)}
+:root[data-theme="dark"] input,:root[data-theme="dark"] textarea{background:#1d1722;color:var(--ink)}
+:root[data-theme="dark"] .low-script{background:#332b1d;border-left-color:#d6ad58}
+:root[data-theme="dark"] .script-section{background:#261d2d}
+:root[data-theme="dark"] .avoid-section{background:#2d1d22}
+:root[data-theme="dark"] .mana-section{background:#30291c;border-color:#725e31}
+:root[data-theme="dark"] .repair-section{background:#1d2b23;border-color:#3d6b4b}
+:root[data-theme="dark"] .danger{background:#2d1d22;color:var(--danger)}
+:root[data-theme="dark"] .icon-btn{box-shadow:0 4px 14px rgba(0,0,0,.28)}
+:root[data-theme="dark"] .search-wrap{box-shadow:0 6px 20px rgba(0,0,0,.22)}
+:root[data-theme="dark"] .spell-card{box-shadow:0 5px 18px rgba(0,0,0,.2)}
+:root[data-theme="dark"] #toast{background:#f0e8f4;color:#241b2a}
+.tags-section li{background:var(--accent-soft)}
