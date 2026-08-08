@@ -1,9 +1,20 @@
 {
   "name":"Tiny Companion Spellbook",
   "short_name":"Spellbook",
+  "description":"Scripts, spells, and repair tools for small-human chaos.",
+  "id":"./",
   "start_url":"./",
+  "scope":"./",
   "display":"standalone",
+  "orientation":"portrait-primary",
   "background_color":"#f7f3f8",
   "theme_color":"#775c96",
-  "description":"Scripts, spells, and repair tools for small-human chaos."
+  "icons":[
+    {
+      "src":"icon.svg",
+      "sizes":"any",
+      "type":"image/svg+xml",
+      "purpose":"any maskable"
+    }
+  ]
 }
