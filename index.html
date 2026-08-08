@@ -7,6 +7,8 @@
   <title>Tiny Companion Spellbook</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="theme.css" />
+  <script src="theme.js" defer></script>
 </head>
 <body>
   <div class="app-shell">
@@ -58,9 +60,7 @@
     <article class="sheet">
       <div class="sheet-handle"></div>
       <header class="sheet-header">
-        <div>
-          <h2 id="detailTitle"></h2>
-        </div>
+        <div><h2 id="detailTitle"></h2></div>
         <div class="header-actions">
           <button id="favouriteBtn" class="icon-btn" aria-label="Favourite spell">☆</button>
           <button id="closeDetail" class="icon-btn" aria-label="Close">×</button>
@@ -83,12 +83,10 @@
         <button id="closeForm" type="button" class="icon-btn" aria-label="Close">×</button>
       </header>
       <input id="cardId" type="hidden" />
-
       <div id="addMethodTabs" class="method-tabs" role="tablist" aria-label="How to add a spell">
         <button id="manualTab" type="button" class="method-tab active" role="tab" aria-selected="true">Fill in form</button>
         <button id="jsonTab" type="button" class="method-tab" role="tab" aria-selected="false">Paste JSON</button>
       </div>
-
       <div id="manualFields">
         <label>Title<input id="title" required /></label>
         <label>Situation / Trigger<textarea id="situation" rows="2" required></textarea></label>
@@ -104,7 +102,6 @@
         <label>Related spells <small>Comma-separated IDs or titles</small><input id="related" /></label>
         <label>Notes / real-life examples<textarea id="notes" rows="4"></textarea></label>
       </div>
-
       <div id="jsonFields" class="hidden">
         <div class="json-help">
           <strong>Paste one spell or several spells.</strong>
@@ -113,10 +110,8 @@
         <label>Spell JSON<textarea id="jsonPaste" rows="15" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder='{"id":"lost-toy-lantern","title":"Lost Toy Lantern", ...}'></textarea></label>
         <p id="jsonStatus" class="json-status" aria-live="polite"></p>
       </div>
-
       <div class="form-actions">
-        <button id="deleteBtn" type="button" class="danger hidden">Delete</button>
-        <span></span>
+        <button id="deleteBtn" type="button" class="danger hidden">Delete</button><span></span>
         <button type="button" id="cancelForm" class="secondary">Cancel</button>
         <button id="saveSpellBtn" type="submit" class="primary">Save spell</button>
       </div>
@@ -146,16 +141,11 @@
     <form id="liveSituationForm" class="sheet prompt-sheet">
       <div class="sheet-handle"></div>
       <header class="sheet-header">
-        <div>
-          <p class="eyebrow">Copy for ChatGPT</p>
-          <h2>What’s happening right now?</h2>
-        </div>
+        <div><p class="eyebrow">Copy for ChatGPT</p><h2>What’s happening right now?</h2></div>
         <button id="closeLiveSituation" type="button" class="icon-btn" aria-label="Close">×</button>
       </header>
       <p class="muted">A few rough words are enough. Include what Miki is saying or doing and where you are in the situation.</p>
-      <label>Live situation
-        <textarea id="liveSituationInput" rows="7" placeholder="Example: We need to leave for daycare. Miki is refusing shoes and saying she’ll miss me. I’ve already asked three times and I’m running out of patience."></textarea>
-      </label>
+      <label>Live situation<textarea id="liveSituationInput" rows="7" placeholder="Example: We need to leave for daycare. Miki is refusing shoes and saying she’ll miss me. I’ve already asked three times and I’m running out of patience."></textarea></label>
       <div class="prompt-actions">
         <button id="cancelLiveSituation" type="button" class="secondary">Cancel</button>
         <button type="submit" class="primary">Copy prompt</button>
