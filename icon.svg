@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Tiny Companion Spellbook icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2d2238"/>
+      <stop offset="1" stop-color="#5f3f78"/>
+    </linearGradient>
+    <linearGradient id="book" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2c9ea"/>
+      <stop offset="1" stop-color="#c7a8e4"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <path d="M135 133c48 0 87 12 121 37v227c-34-21-73-31-121-31-18 0-33-15-33-33V166c0-18 15-33 33-33Z" fill="url(#book)"/>
+  <path d="M377 133c-48 0-87 12-121 37v227c34-21 73-31 121-31 18 0 33-15 33-33V166c0-18-15-33-33-33Z" fill="#e4b7dc"/>
+  <path d="M256 170v227" stroke="#7f5a9b" stroke-width="10" stroke-linecap="round"/>
+  <path d="M256 86l13 37 37 13-37 13-13 37-13-37-37-13 37-13 13-37Z" fill="#ffd7ef"/>
+  <circle cx="346" cy="215" r="12" fill="#8a5fa6"/>
+  <circle cx="174" cy="236" r="9" fill="#8a5fa6"/>
+</svg>
