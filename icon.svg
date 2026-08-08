@@ -1,19 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Tiny Companion Spellbook icon">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2d2238"/>
-      <stop offset="1" stop-color="#5f3f78"/>
+    <radialGradient id="orb" cx="50%" cy="46%" r="58%">
+      <stop offset="0" stop-color="#7f5aa3" stop-opacity=".42"/>
+      <stop offset=".72" stop-color="#4b315f" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#2a1937" stop-opacity=".04"/>
+    </radialGradient>
+    <linearGradient id="crescent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3b6cf"/>
+      <stop offset="1" stop-color="#c87ca8"/>
     </linearGradient>
-    <linearGradient id="book" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f2c9ea"/>
-      <stop offset="1" stop-color="#c7a8e4"/>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff1f6"/>
+      <stop offset="1" stop-color="#edcadc"/>
     </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <path d="M135 133c48 0 87 12 121 37v227c-34-21-73-31-121-31-18 0-33-15-33-33V166c0-18 15-33 33-33Z" fill="url(#book)"/>
-  <path d="M377 133c-48 0-87 12-121 37v227c34-21 73-31 121-31 18 0 33-15 33-33V166c0-18-15-33-33-33Z" fill="#e4b7dc"/>
-  <path d="M256 170v227" stroke="#7f5a9b" stroke-width="10" stroke-linecap="round"/>
-  <path d="M256 86l13 37 37 13-37 13-13 37-13-37-37-13 37-13 13-37Z" fill="#ffd7ef"/>
-  <circle cx="346" cy="215" r="12" fill="#8a5fa6"/>
-  <circle cx="174" cy="236" r="9" fill="#8a5fa6"/>
+
+  <circle cx="256" cy="256" r="198" fill="url(#orb)"/>
+  <circle cx="256" cy="256" r="182" fill="none" stroke="#b98bcf" stroke-opacity=".28" stroke-width="2"/>
+
+  <path d="M150 130c-50 34-84 90-84 154 0 102 84 186 186 186 85 0 157-57 179-135-35 54-96 90-164 90-108 0-196-88-196-196 0-37 10-71 27-99 14-21 31-40 52-56Z" fill="url(#crescent)" opacity=".95"/>
+
+  <g filter="url(#glow)">
+    <path d="M139 219c45 0 84 10 117 33v144c-33-20-72-30-117-30-14 0-26-12-26-26v-95c0-14 12-26 26-26Z" fill="url(#page)"/>
+    <path d="M373 219c-45 0-84 10-117 33v144c33-20 72-30 117-30 14 0 26-12 26-26v-95c0-14-12-26-26-26Z" fill="#f3d6e4"/>
+    <path d="M256 252v144" stroke="#7d567f" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <path d="M255 135l11 29 29 11-29 11-11 29-11-29-29-11 29-11 11-29Z" fill="#ffe8f3"/>
+  <path d="M318 111l6 16 16 6-16 6-6 16-6-16-16-6 16-6 6-16Z" fill="#f7d7ee"/>
+  <circle cx="341" cy="191" r="4" fill="#f7d7ee"/>
+  <circle cx="195" cy="168" r="3" fill="#f7d7ee"/>
+  <circle cx="164" cy="334" r="3" fill="#f7d7ee"/>
 </svg>
