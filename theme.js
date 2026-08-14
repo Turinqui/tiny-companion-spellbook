@@ -60,7 +60,13 @@ window.addEventListener('DOMContentLoaded',()=>{
     };
   }
 
-  document.getElementById('northStarLine')?.addEventListener('click',openNorthStar);
-  document.getElementById('northStarCard')?.addEventListener('click',openNorthStar);
+  const northStarLine=document.getElementById('northStarLine');
+  const main=document.querySelector('main');
+  if(northStarLine&&main){
+    northStarLine.innerHTML='safe • loving • curious • joyful <span aria-hidden="true">✦</span>';
+    northStarLine.setAttribute('aria-label','Read our North Star core value statement');
+    main.insertBefore(northStarLine,main.firstChild);
+    northStarLine.addEventListener('click',openNorthStar);
+  }
   document.getElementById('closeNorthStar')?.addEventListener('click',()=>document.getElementById('northStarDialog')?.close());
 });
