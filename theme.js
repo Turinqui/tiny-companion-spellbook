@@ -35,6 +35,10 @@ function updateBackupStatus(){
   const d=new Date(raw);
   el.textContent=`Last backup: ${Number.isNaN(d.getTime())?'Unknown':d.toLocaleString(undefined,{dateStyle:'medium',timeStyle:'short'})}`;
 }
+function openNorthStar(){
+  const dialog=document.getElementById('northStarDialog');
+  if(dialog&&!dialog.open)dialog.showModal();
+}
 setTheme(getInitialTheme());
 window.addEventListener('DOMContentLoaded',()=>{
   const btn=document.getElementById('themeToggle');
@@ -55,4 +59,8 @@ window.addEventListener('DOMContentLoaded',()=>{
       updateBackupStatus();
     };
   }
+
+  document.getElementById('northStarLine')?.addEventListener('click',openNorthStar);
+  document.getElementById('northStarCard')?.addEventListener('click',openNorthStar);
+  document.getElementById('closeNorthStar')?.addEventListener('click',()=>document.getElementById('northStarDialog')?.close());
 });
