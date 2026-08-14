@@ -17,6 +17,7 @@
         <p class="eyebrow">Tiny Companion</p>
         <h1>Spellbook</h1>
         <p class="subtitle">Scripts, spells, and repair tools for small-human chaos.</p>
+        <button id="northStarLine" class="north-star-line" type="button">Safe • loving • curious • joyful <span aria-hidden="true">✦</span></button>
       </div>
       <div class="topbar-actions">
         <button id="themeToggle" class="icon-btn theme-toggle" aria-label="Switch to dark mode" aria-pressed="false" title="Switch colour mode">☾</button>
@@ -25,6 +26,12 @@
     </header>
 
     <main>
+      <button id="northStarCard" class="north-star-card" type="button" aria-label="Read our North Star core value statement">
+        <span class="north-star-symbol" aria-hidden="true">✦</span>
+        <span class="north-star-copy"><strong>Our North Star</strong><small>Tap to read our core value statement</small></span>
+        <span class="north-star-arrow" aria-hidden="true">›</span>
+      </button>
+
       <section class="search-panel" aria-label="Search spells">
         <label class="search-wrap">
           <span aria-hidden="true">⌕</span>
@@ -151,6 +158,18 @@
         <button type="submit" class="primary">Copy prompt</button>
       </div>
     </form>
+  </dialog>
+
+  <dialog id="northStarDialog" class="sheet-dialog north-star-dialog">
+    <section class="sheet north-star-sheet">
+      <div class="sheet-handle"></div>
+      <div class="north-star-emblem" aria-hidden="true">✦</div>
+      <p class="eyebrow">Our North Star</p>
+      <h2>Our core value statement</h2>
+      <div class="north-star-divider" aria-hidden="true"><span>✦</span></div>
+      <p class="north-star-statement">I want to be a safe, loving, curious and joyful parent who celebrates Miki fiercely, helps her learn and discover the world, respects her feelings while holding healthy boundaries, and builds the kind of trusting relationship where she knows she can always come to me honestly.</p>
+      <button id="closeNorthStar" class="secondary north-star-close" type="button">♡ Close</button>
+    </section>
   </dialog>
 
   <div id="toast" role="status" aria-live="polite"></div>
